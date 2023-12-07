@@ -50,7 +50,7 @@ type ResponseError struct {
 
 func dbConn() (db *sql.DB) {
 	dbDriver := "mysql"
-	dbName := "vanya7"
+	dbName := "FarisRasyid_50421483" //ganti dengan nama Npm masing-masing
 	dbUser := "root"
 	dbPass := ""
 	db, err := sql.Open(dbDriver, dbUser+":"+dbPass+"@tcp(localhost)/"+dbName)
@@ -305,11 +305,11 @@ func main() {
 
 	srv := &http.Server{
 		Handler:      r,
-		Addr:         "localhost:8081",
+		Addr:         "localhost:9081", //port ganti dengan 2 digit terakhir npm kalian
 		WriteTimeout: 15 * time.Second,
 		ReadTimeout:  15 * time.Second,
 	}
 
-	log.Print("Server berjalan di http://localhost:8081")
+	log.Print("Server berjalan di http://localhost:9081") //port ganti dengan 2 digit terakhir npm kalian
 	srv.ListenAndServe()
 }
